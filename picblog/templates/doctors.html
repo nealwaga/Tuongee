@@ -1,0 +1,209 @@
+{% extends "base.html" %} {% block content %}
+<style>
+	/* .card {
+		border-radius: 0;
+		box-shadow: 5px 5px 15px #bfbfbf;
+		transition: all 0.3s ease-in;
+		-webkit-transition: all 0.3s ease-in;
+		-moz-transition: all 0.3s ease-in;
+		color: black;
+	}
+	.card:hover {
+		background: #585858;
+		color: #fff;
+		border-radius: 5px;
+		border: none;
+		box-shadow: 5px 5px 10px #9e9e9e;
+	}
+	.card:hover h3,
+	.card:hover i {
+		color: #fff; */
+	
+</style>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/dash.css' %}">
+
+<div class="container">
+	<div class="row">
+			   <div class="col-lg-6 col-md-6 col-sm-6">
+				   <img class="mypic" src="{% static 'images/stressed.jpg' %}" alt="Hi!" />
+				   <!-- <img src="/static/images/stressed.jpg" class="pic" alt=""> -->
+			   </div>
+								   
+			   <div class="col-lg-6 col-md-6 col-sm-6 para" style="text-align: center; margin-top: 20%;">
+				   <div>
+					   <p>How are you feeling today? <br> Don't keep it to yourself</p>
+											   
+					   <div class="form-group">
+						   <a href="#help"><input type="submit" class="btn btn-sm speak" style="background-color:rgb(16, 53, 100);
+						   color: #fff;
+						   border-radius: 40%;" value="Speak to a therapist Today!!"></a>
+						   </div>
+				   </div>   <style></style>
+											   
+			   </div>
+		   </div>
+	   </div>
+   
+   <section class="pt-5 pb-5">
+	   <div class="container">
+		   <div class="row">
+			   <div class="col-6">
+				   <h3 class="mb-3">MENTAL HEALTH CONVERSATIONS</h3>
+			   </div>
+			   <div class="col-6 text-right">
+				   <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+					   <i class="fa fa-arrow-left"></i>
+				   </a>
+				   <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+					   <i class="fa fa-arrow-right"></i>
+				   </a>
+			   </div>
+			   <div class="col-12">
+				   <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+					   <div class="carousel-inner">
+						   <div class="carousel-item active">
+							   <div class="row">
+								   <div class="col-md-4 mb-3">
+									   <div class="card">
+										   <img class="img-fluid" alt="100%x280" src="{% static 'images/mental9.png' %}" >
+										   <div class="card-body">
+											   <h4 class="card-title">The “Model Minority” Stereotype Prevents AAPI From Seeking Mental Health Care</h4>
+											   <a class="card-text" href="https://www.nami.org/Blogs/NAMI-Blog/May-2022/The-Model-Minority%E2%80%9D-Stereotype-Prevents-AAPI-From-Seeking-Mental-Health-Care">Read More >>></a>
+										   </div>
+									   </div>
+								   </div>
+								   <div class="col-md-4 mb-3">
+									   <div class="card">
+										   <img class="img-fluid" alt="100%x280" src="{% static 'images/mental1.png' %}" >
+										   <div class="card-body">
+											   <h4 class="card-title">My Journey to Reduce the Stigma Around Male Disclosure of Child Sexual Abuse</h4>
+											   <a class="card-text" href="https://www.nami.org/Blogs/NAMI-Blog/June-2022/My-Journey-to-Reduce-the-Stigma-Around-Male-Disclosure-of-Child-Sexual-Abuse">Read More >>></a>
+										   </div>
+									   </div>
+								   </div>
+								   <div class="col-md-4 mb-3">
+									   <div class="card">
+										   <img class="img-fluid" alt="100%x280" src="{% static 'images/mental2.png' %}" >
+										   <div class="card-body">
+											   <h4 class="card-title">To Improve Student Mental Health, We Need More Than Crisis Response</h4>
+											   <a class="card-text" href="https://www.nami.org/Blogs/NAMI-Blog/June-2022/To-Improve-Student-Mental-Health-We-Need-More-Than-Crisis-Response">Read More >>></a>
+										   </div>
+									   </div>
+								   </div>
+							   </div>
+						   </div>
+						   <div class="carousel-item">
+							   <div class="row">
+								   <div class="col-md-4 mb-3">
+									   <div class="card">
+										   <img class="img-fluid" alt="100%x280" src="{% static 'images/mental3.png' %}" >
+										   <div class="card-body">
+											   <h4 class="card-title">Advancing The Youth Mental Health Conversation Through Novels</h4>
+											   <a class="card-text" href="https://www.nami.org/Blogs/NAMI-Blog/June-2022/Advancing-The-Youth-Mental-Health-Conversation-Through-Novels">Read More >>></a>
+										   </div>
+									   </div>
+								   </div>
+								   <div class="col-md-4 mb-3">
+									   <div class="card">
+										   <img class="img-fluid" alt="100%x280" src="{% static 'images/mental4.png' %}" >
+										   <div class="card-body">
+											   <h4 class="card-title">5 Tips to Help Young Children Understand Anger</h4>
+											   <a class="card-text" href="https://www.nami.org/Blogs/NAMI-Blog/June-2022/5-Tips-to-Help-Young-Children-Understand-Anger">Read More>>></a>
+										   </div>
+									   </div>
+								   </div>
+								   <div class="col-md-4 mb-3">
+									   <div class="card">
+										   <img class="img-fluid" alt="100%x280" src="{% static 'images/mental5.png' %}" >
+										   <div class="card-body">
+											   <h4 class="card-title">Bold Action Will Change the Mental Health Conversation</h4>
+											   <a class="card-text" href="https://www.nami.org/Blogs/NAMI-Blog/May-2022/Bold-Action-Will-Change-the-Mental-Health-Conversation">Read More>>></a>
+										   </div>
+									   </div>
+								   </div>
+							   </div>
+						   </div>
+						   <div class="carousel-item">
+							   <div class="row">
+								   <div class="col-md-4 mb-3">
+									   <div class="card">
+										   <img class="img-fluid" alt="100%x280" src="{% static 'images/mental6.png' %}" >
+										   <div class="card-body">
+											   <h4 class="card-title">Knowing and Managing My Triggers</h4>
+											   <a class="card-text" href="https://www.nami.org/Blogs/NAMI-Blog/May-2022/Knowing-and-Managing-My-Triggers">Read More>>></a>
+										   </div>
+									   </div>
+								   </div>
+								   <div class="col-md-4 mb-3">
+									   <div class="card">
+										   <img class="img-fluid" alt="100%x280" src="{% static 'images/mental7.png' %}" >
+										   <div class="card-body">
+											   <h4 class="card-title">Mental Health is Health: Giving Context to Mental Illness</h4>
+											   <a class="card-text" href="https://www.nami.org/Blogs/NAMI-Blog/May-2022/Mental-Health-is-Health-Giving-Context-to-Mental-Illness">Read More>>></a>
+										   </div>
+									   </div>
+								   </div>
+								   <div class="col-md-4 mb-3">
+									   <div class="card">
+										   <img class="img-fluid" alt="100%x280" src="{% static 'images/mental8.png' %}" >
+										   <div class="card-body">
+											   <h4 class="card-title">Three Ways Traumatic Stress Presents and How to Manage It</h4>
+											   <a class="card-text" href="https://www.nami.org/Blogs/NAMI-Blog/May-2022/Three-Ways-Traumatic-Stress-Presents-and-How-to-Manage-It">Read More>>></a>
+										   </div>
+									   </div>
+								   </div>
+							   </div>
+						   </div>
+					   </div>
+				   </div>
+			   </div>
+		   </div>
+	   </div>
+   </section>
+   <script type='text/javascript'></script>
+   
+   <div>
+	   <div id="help" style="text-align: center; margin: 30px;">
+		   <h3> OUR PARTNERS </h3>
+		   <p>Always willing and happy to help</p>
+		   <p>Talk to our partners for professional help at a low cost courtesy of us</p>
+	   </div>
+	   <div class="row">
+		   <div class="col-sm-4">
+			 <div class="card">
+			   <div class="card-body">
+				 <h5 class="card-title">Mathari Mental Hospital</h5>
+				 <p class="card-text">It is a specialized referral institution in mental health in Kenya. The hospital treats all types of mental disorders.</p>
+				 <a href="https://matharihospital.go.ke/contactus" class="btn btn-primary">Contact Us</a>
+			   </div>
+			 </div>
+		   </div>
+		   <div class="col-sm-4">
+			 <div class="card">
+			   <div class="card-body">
+				 <h5 class="card-title">Chiromo Lane Medical Centre</h5>
+				 <p class="card-text">It is a mental hospital that is designed to cater for all types of acute psychiatric disorders in a safe, secure and dignified environment.</p>
+				 <a href="https://chiromohospitalgroup.co.ke/contact-us/" class="btn btn-primary">Contact Us</a>
+			   </div>
+			 </div>
+		   </div>
+		   
+   
+		   <div class="col-sm-4">
+			   <div class="card">
+				 <div class="card-body">
+				   <h5 class="card-title">LifeBridge Hospital</h5>
+				   <p class="card-text">Lifebridge Hospital serves individuals of all ages experiencing psychiatric disorders such as depressive disorders, anxiety, personality, bipolar and childhood psychiatric disorders.</p>
+				   <a href="https://www.lifebridgehospital.org/psychiatric-care/" class="btn btn-primary">Contact Us</a>
+				 </div>
+			   </div>
+			 </div>
+   
+   
+		 </div>
+   </div>
+   
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+
+
+<img src="https://img.freepik.com/free-vector/mental-health-awareness-concept_23-2148511710.jpg?t=st=1656023906~exp=1656024506~hmac=5a49fd9fba1c2b541cc82b3644feaa3c7563687c7881496842c44ae222b11bb8&w=740" class="img-fluid" style="height: 300px;margin-left: 490px;"alt="Responsive image">
+<br />
+<div class="form-group d-flex align-items-center justify-content-center">
+	
+	<form method="POST"  >
+		
+		{% csrf_token %} {{form.as_p}}
+		<button class="btn btn-primary" style="margin-bottom: 25.5rem;margin-left: 7.5rem;">
+			Login
+		</button>
+	</form>
+</div>
+{% endblock %}

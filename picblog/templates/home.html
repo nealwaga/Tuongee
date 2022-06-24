@@ -1,0 +1,95 @@
+{% extends "base.html" %} {% block content %}
+<style>
+	a {
+		color: rgb(19, 9, 104) !important;
+	}
+	.btn-primary {
+    background-color: #c7d4eb !important;
+	border-color: white !important;
+}
+	
+
+</style>
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+	<div class="carousel-indicators">
+	  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+	  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+	  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+	</div>
+	<div class="carousel-inner carousel-fade">
+	  <div class="carousel-item active " data-bs-interval="10000" style="height:100vh ;transition: transform 2s ease, opacity .5s ease-out">
+		<img src="https://img.freepik.com/free-vector/people-connecting-jigsaw-pieces-head-together_53876-59847.jpg?t=st=1655846442~exp=1655847042~hmac=cd8961d36245b016c3d0385757d57ca22070b5877c149d442890cf16dd23b21c&w=740" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block" style="margin-bottom:100px ; color:rgb(3, 1, 18);font-family: 'Times New Roman', Times, serif;">
+		  <h4><i>Helping you help yourself</i></h4>
+		  <br>
+		  
+		  <p><i>Tuongee is a non-profit, non-political organization aimed at
+			providing a foundation for psychological aid to equip generations 
+		   with tools to foster mental wellness</i></p>
+		   <br>
+		   <!-- <button type="button" class="btn btn-light" style="background-color:rgb(16, 53, 100) ; border-radius: 30px;"><a href="" style="color: #fff;">learn more>></a></button> -->
+		   <a href="/celebrities"><button type="button" class="btn btn-light" style="background-color:rgb(16, 53, 100) ; border-radius: 30px;color: #fff;">learn more >></button></a>
+		</div>
+	  </div>
+	  <div class="carousel-item " data-bs-interval="2000" style="height: 100vh;transition: transform 2s ease, opacity .5s ease-out">
+		<img src="https://img.freepik.com/free-vector/mental-health-awareness-concept_23-2148522697.jpg?w=740" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block" style="margin-bottom:100px ; color:rgb(3, 1, 18);font-family: 'Times New Roman', Times, serif;">
+		  <h4><i>Don't be embarrased you are not alone</i></h4>
+		  <br>
+		  
+		  <p><i>Tuongee is offers a safe space where you can post whatever you are going through anonymously and you can also seek help anonymously from trained therapist all over kenya</i></p>
+		   <br>
+		   <a href="/celebrities"><button type="button" class="btn btn-light" style="background-color:rgb(16, 53, 100) ; border-radius: 30px;color: #fff;">learn more >></button></a>
+		  </div>
+
+
+		</div>
+	  </div>
+	  <div class="carousel-item">
+		<img src="https://img.freepik.com/free-vector/mental-health-understanding-brain-vector_53876-79083.jpg?t=st=1655901824~exp=1655902424~hmac=b8209853981cde05f35ff9c3c12f8d8d0f984c09dc56dc05b67f252212e8e8c0&w=740" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block">
+		  <h5>Third slide label</h5>
+		  <p>Some representative placeholder content for the third slide.</p>
+		</div>
+	  </div>
+	</div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Next</span>
+	</button>
+   
+  </div>
+
+<br>
+
+<h1 style="margin-bottom: 50px; text-align: center; font-size: 4rem;color:rgb(19, 9, 104) ;">Blog</h1>
+
+<ul class="list-group list-group-flush" style="color: black;">
+	{% for post in object_list %}
+	<li class="list-group-item" style="margin-bottom: 2rem; color: black" >
+		<a style="color: white;"href="{% url 'post' post.pk%}" class="btn btn-primary btn-lg"
+			>{{post.title}}
+		</a>
+		by {{post.author.username}}
+		<small>
+			{% if user.is_authenticated %} {% if user.id == post.author.id %} -<a
+				href="{% url 'update' post.pk%}"
+			>
+				Edit </a
+			><a href="{% url 'delete' post.pk%}"> Delete </a>
+			{% endif %} {% endif %}
+		</small>
+		<br />
+		<br />
+		<div  class="bg-light p-5 rounded">{{post.body}}</div>
+
+		<br />
+		<br />
+	</li>
+	{% endfor %}
+</ul>
+{% endblock %}

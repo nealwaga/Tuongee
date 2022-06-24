@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 style="color: #0c035e;">Register</h1>
+<br />
+<div class="form-group" style="margin-bottom: 13.5rem; margin-top: 3rem">
+	<form method="POST">
+		{% csrf_token %} {{form.as_p}}
+		<button class="btn btn-primary">Register</button>
+	</form>
+</div>
+{% endblock %}

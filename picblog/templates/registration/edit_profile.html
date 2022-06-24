@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 style="margin-top: 30px">EDIT PROFILE</h1>
+<br />
+<div class="form-group container" style="margin-top: 20px">
+	<form method="POST">
+		{% csrf_token %} {{form.as_p}}
+		<button class="btn btn-primary" style="margin-bottom: 33px">Update</button>
+	</form>
+</div>
+{% endblock %}

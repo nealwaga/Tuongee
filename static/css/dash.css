@@ -1,0 +1,21 @@
+.mypic{
+    object-fit: cover;
+    width: 400px;
+    height: 450px;
+    border-radius: 10%;
+    margin: 20px;
+    box-shadow: 0 10px 13px 0 rgba(0, 0, 0, 0.2), 0 11px 25px 0 rgba(0, 0, 0, 0.19);
+}
+.btn btn-sm speak{
+    background-color: rgb(16, 53, 100);;
+    color: #fff;
+    border-radius: 30px;
+}
+.btn btn-sm speak:hover{
+    transition: 250ms;
+    background-color: #ABD6DFFF;
+}
+.para{
+    text-align: center;
+    margin-top: 50%;
+}
